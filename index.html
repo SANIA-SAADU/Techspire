@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>HealSmart</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>Welcome to HealSmart</h1>
+    <p id="quote">Loading quote...</p>
+
+    <input type="text" id="symptom" placeholder="How can I help you today?" />
+    <button onclick="search()">Search</button>
+    <button onclick="startVoice()">🎤 Speak</button>
+
+    <br><br>
+    <button onclick="window.location.href='profile.html'">👤 Profile</button>
+    <button onclick="toggleElderMode()">🧓 Elder Mode</button>
+  </div>
+
+  <script src="data.js"></script>
+  <script src="script.js"></script>
+  <script src="voice.js"></script>
+  <script src="eldermode.js"></script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+=<!DOCTYPE html>
+<html>
+<head>
+  <title>HealSmart Results</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h2>Your Health Suggestions</h2>
+    <p><strong>Reasons:</strong> <span id="reasons"></span></p>
+    <p><strong>Eat:</strong> <span id="eat"></span></p>
+    <p><strong>Avoid:</strong> <span id="avoid"></span></p>
+    <p><strong>Exercise:</strong> <span id="exercise"></span></p>
+    <p><strong>Home Remedies:</strong> <span id="remedy"></span></p>
+    <button onclick="window.location.href='index.html'">⬅️ Home</button>
+  </div>
+
+  <script>
+    const result = JSON.parse(localStorage.getItem("result"));
+    document.getElementById("reasons").innerText = result.reasons.join(", ");
+    document.getElementById("eat").innerText = result.eat.join(", ");
+    document.getElementById("avoid").innerText = result.avoid.join(", ");
+    document.getElementById("exercise").innerText = result.exercise.join(", ");
+    document.getElementById("remedy").innerText = result.remedy.join(", ");
+  </script>
+</body>
+</html>
